@@ -1,0 +1,88 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-inter: 'Inter', sans-serif;
+  --background: 28 25% 97%;
+  --foreground: 20 15% 10%;
+  --card: 0 0% 100%;
+  --card-foreground: 20 15% 10%;
+  --primary: 27 100% 50%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 28 20% 93%;
+  --secondary-foreground: 20 15% 10%;
+  --muted: 28 15% 93%;
+  --muted-foreground: 20 10% 48%;
+  --accent: 27 100% 97%;
+  --accent-foreground: 27 80% 38%;
+  --destructive: 0 84% 60%;
+  --destructive-foreground: 0 0% 100%;
+  --border: 28 15% 88%;
+  --ring: 27 100% 50%;
+  --radius: 0.875rem;
+}
+
+.dark {
+  --background: 220 15% 8%;
+  --foreground: 28 15% 95%;
+  --card: 220 15% 11%;
+  --card-foreground: 28 15% 95%;
+  --primary: 27 100% 50%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 220 12% 16%;
+  --secondary-foreground: 28 15% 95%;
+  --muted: 220 12% 16%;
+  --muted-foreground: 28 10% 60%;
+  --accent: 27 60% 12%;
+  --accent-foreground: 27 100% 68%;
+  --destructive: 0 70% 45%;
+  --destructive-foreground: 0 0% 100%;
+  --border: 220 12% 20%;
+  --ring: 27 100% 50%;
+}
+
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  font-family: var(--font-inter);
+  background-color: hsl(var(--background));
+  color: hsl(var(--foreground));
+  -webkit-font-smoothing: antialiased;
+  overscroll-behavior: none;
+}
+
+input, select, textarea {
+  font-size: 16px;
+}
+
+/* Hide scrollbar Webkit */
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  display: none;
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
+.dark .glass-card {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.glow-orange {
+  box-shadow: 0 8px 32px rgba(255, 121, 0, 0.25), 0 2px 8px rgba(255, 121, 0, 0.15);
+}
+
+.pb-safe {
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+.pt-safe {
+  padding-top: env(safe-area-inset-top, 0px);
+}
